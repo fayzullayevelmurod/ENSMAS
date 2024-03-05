@@ -1,0 +1,314 @@
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+@media (min-width: 2000px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 2100px) {
+	html {
+		font-size: 19px;
+	}
+}
+
+@media (min-width: 2200px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 2300px) {
+	html {
+		font-size: 21px;
+	}
+}
+
+@media (min-width: 2400px) {
+	html {
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 2500px) {
+	html {
+		font-size: 23px;
+	}
+}
+
+@media (min-width: 2600px) {
+	html {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 2700px) {
+	html {
+		font-size: 25px;
+	}
+}
+
+@media (min-width: 2800px) {
+	html {
+		font-size: 26px;
+	}
+}
+
+@media (min-width: 2900px) {
+	html {
+		font-size: 27px;
+	}
+}
+
+@media (min-width: 3000px) {
+	html {
+		font-size: 28px;
+	}
+}
+
+@media (min-width: 3100px) {
+	html {
+		font-size: 29px;
+	}
+}
+
+@media (min-width: 3200px) {
+	html {
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 3300px) {
+	html {
+		font-size: 31px;
+	}
+}
+
+@media (min-width: 3400px) {
+	html {
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 3500px) {
+	html {
+		font-size: 33px;
+	}
+}
+
+@media (min-width: 3600px) {
+	html {
+		font-size: 34px;
+	}
+}
+
+@media (min-width: 3700px) {
+	html {
+		font-size: 35px;
+	}
+}
+
+@media (min-width: 3800px) {
+	html {
+		font-size: 36px;
+	}
+}
+
+body {
+	font-family: "Atyp Text", sans-serif;
+	font-weight: 400;
+	background-image: url(../images/bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.wrapper {
+	overflow: hidden;
+	background: #000211;
+}
+
+.container {
+	max-width: 1663px;
+	margin: 0 auto;
+}
+
+/* media nav */
+.close-btn,
+.open-menu {
+	display: none;
+}
+
+.ml {
+	margin-left: 112px;
+}
+
+/* header */
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background: linear-gradient(90deg,
+			rgba(0, 2, 17, 0) 5.03%,
+			#000211 14.4%,
+			#000211 85.23%,
+			rgba(0, 0, 0, 0) 94.87%,
+			rgba(0, 2, 17, 0) 94.87%);
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header .nav {
+	display: flex;
+	align-items: center;
+	gap: 42px;
+}
+
+.header .nav-list {
+	display: flex;
+}
+
+.header .nav-item {
+	position: relative;
+}
+
+.header .nav-item::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	width: 1px;
+	height: 20px;
+	background: rgb(0, 159, 227);
+}
+
+.header .nav-item:last-child::before {
+	display: none;
+}
+
+.header .nav-item .nav-link {
+	position: relative;
+	padding: 5px;
+	color: rgb(255, 255, 255);
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 21px;
+	transition: text-shadow 0.2s linear;
+	margin-right: 4px;
+}
+
+.header .nav-link:hover {
+	text-shadow: 0 0 12px #dcdcdc;
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+}
+
+.header-right .price-list__btn {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	line-height: 23px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border: 2px solid rgb(35, 122, 226);
+	border-radius: 20px;
+	transition: all 0.2s linear;
+	position: relative;
+	overflow: hidden;
+}
+
+.header-right .price-list__btn::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(9, 60, 115);
+	top: 0;
+	left: -100%;
+	z-index: -1;
+	border-radius: 16px;
+	transition: all 0.2s ease;
+}
+
+.header-right .price-list__btn:hover::before {
+	left: 0;
+}
+
+/* hero section */
+.hero-section {
+	padding: 189px 0 150px 0;
+	background-image: url(../images/hero-bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 -15px;
+}
+.hero-section .hero-logo {
+	width: 909px;
+	height: 188px;
+}
+
+.hero-section .hero-content {
+	background: linear-gradient(90deg, #002a5b 0.98%, rgba(0, 42, 91, 0) 100%);
+	padding: 41px 265px 46px 232px;
+	color: #fff;
+	width: 70%;
+	margin-top: 110px;
+}
+
+.hero-section .hero-content__title {
+	color: rgb(255, 255, 255);
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 46px;
+	text-shadow: 0 0 5px #dcdcdc;
+}
+
+.hero-section .hero-content__info {
+	max-width: 763px;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 28px;
+	text-shadow: 0 0 2px #dcdcdc;
+	margin-top: 10px;
+}
+
+.hero-section .hero-content .hero-content__info:last-child {
+	margin-top: 35px;
+}
