@@ -146,13 +146,14 @@ body {
   font-family: "Atyp Text", sans-serif;
   font-weight: 400;
   background-image: url(../images/bg.png);
+  /* background: #000212 !important; */
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .wrapper {
   overflow: hidden;
-  background: #000211;
+  /* background: #000212 !important; */
 }
 
 .container {
@@ -529,6 +530,14 @@ main {
   gap: 10px;
   border: 1px solid #ffffff;
   border-radius: 40px;
+  transition: all 0.2s linear;
+}
+.products-section .tab-content .flex-box a:hover {
+  color: #002a5b;
+  background-color: #fff;
+}
+.products-section .tab-content .flex-box a:hover > svg path {
+  fill: #002a5b;
 }
 .products-section .tab-content__title {
   font-size: 36px;
@@ -542,14 +551,9 @@ main {
   gap: 20px;
 }
 .products-section .tab-content__img {
-  border: 2px solid;
-  border-image-source: linear-gradient(
-    127.12deg,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  border: 2px solid #326d8c;
   background: radial-gradient(
-    100% 132.11% at 0% 0%,
+    100% 271.11% at 10% -3%,
     rgba(0, 159, 227, 0.62) 0%,
     rgba(0, 159, 227, 0) 100%
   );
@@ -557,7 +561,6 @@ main {
   height: 415px;
   padding: 10px;
   border-radius: 20px;
-  border: 2px;
   gap: 10px;
   display: flex;
   align-items: center;
