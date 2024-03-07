@@ -47,7 +47,7 @@
 							<a class="nav-link" href="#!">Поддержка</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#!">Обратная связь</a>
+							<a class="nav-link open-modal" href="#!">Обратная связь</a>
 						</li>
 					</ul>
 
@@ -151,6 +151,10 @@
 						<div class="sea-box">
 							<div class="sea-img">
 								<img src="images/sea.webp" alt="sea img">
+								<div class="media-sea__img">
+									<img src="images/medai-sea1.png" alt="">
+									<img src="images/media-sea2.png" alt="">
+								</div>
 								<div class="sea-number__one sea-number__box">
 									<div class="relative-box">
 										<img src="images/arrow-bottom.svg" alt="arrow-bottom">
@@ -1643,7 +1647,7 @@
 					</div>
 
 					<div class="services-box">
-						<a class="open-modal" href="#!">Консультация специалиста ENSMAS</a>
+						<a class="open-modal open-modal" href="#!">Консультация специалиста ENSMAS</a>
 					</div>
 					<div class="line"></div>
 
@@ -1885,6 +1889,77 @@
 
 	</div>
 
+	<!-- modal -->
+	<!-- modal -->
+	<div class="parent-modal">
+		<div class="modal">
+			<div class="modal-dialog">
+				<div class="modal-header">
+					<h3>Консультация специалиста CHINT</h3>
+					<!-- <button class="modal-close">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+						</svg>
+					</button> -->
+				</div>
+				<form class="modal-body" id="register-form">
+					<label>ФИО*</label>
+					<input type="text" name="text" placeholder="" id="name">
+					<div class="flex-box">
+						<div>
+							<label>Телефон*</label>
+							<input type="number" name="phone" id="phone">
+						</div>
+						<div>
+							<label>Email*</label>
+							<input type="email" name="email" id="email"
+								pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+						</div>
+					</div>
+					<label>Организация</label>
+					<input type="text" name="text" id="organizatioin">
+					<label>Адрес*</label>
+					<input type="text" name="text" id="address">
+					<label>Комментарий</label>
+					<textarea></textarea>
+					<div class="modal-footer">
+						<div class="re-captcha">
+							<label>
+								<input type="checkbox">
+								I'm not a robot
+							</label>
+							<picture>
+								<img loading="lazy" src="images/re-captcha.png" alt="" width="58" height="48">
+							</picture>
+						</div>
+						<button class="send-data" type="submit" id="submit">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="parent-moda-two show">
+		<div class="modal">
+			<div class="modal-dialog">
+				<!-- <button class="modal__close-two">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+						stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round"
+							d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+					</svg>
+				</button> -->
+				<div>
+					<p>Консультация специалиста ENSMAS</p>
+					<h4>Ваше сообщение отправлено</h4>
+					<span>Ваше обращение мы рассмотрим в ближайшее время.</span>
+					<button class="modal__close-two">Готово</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- swiper js -->
 	<script src="./js/swiper.min.js"></script>

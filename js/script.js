@@ -91,6 +91,75 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	}
+	// modal
+	document.querySelectorAll('.open-modal').forEach(element => {
+		element.addEventListener('click', function () {
+			document.querySelector('.parent-modal').classList.add('show');
+		});
+	})
 
+	// document.querySelector('.modal-close').addEventListener('click', function () {
+	// 	document.querySelector('.parent-modal').classList.remove('show');
+	// });
+
+	document.querySelector('.modal__close-two').addEventListener('click', function () {
+		document.querySelector('.parent-moda-two').classList.remove('show');
+	});
+
+	document.querySelector('.modal').addEventListener('click', function (e) {
+		console.log(e.target);
+		if (e.target === this) {
+			document.querySelector('.parent-modal').classList.remove('show');
+			document.querySelector('.parent-moda-two').classList.remove('show');
+		}
+	});
+
+	function validateEmail(email) {
+		var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	}
+
+	document.getElementById('submit').addEventListener('click', function (e) {
+		e.preventDefault();
+
+		var formFields = ['name', 'phone', 'email', 'address']; // Update 'adress' to 'address'
+		var clickTime = new Date().getTime();
+		var allFieldsFilled = true;
+
+		for (var i = 0; i < formFields.length; i++) {
+			var field = document.getElementById(formFields[i]);
+			var value = field.value.trim();
+
+			if (value === "") {
+				field.classList.add('danger');
+				allFieldsFilled = false;
+			} else {
+				field.classList.remove('danger');
+			}
+		}
+
+		// Email uchun validatsiya
+		var emailField = document.getElementById('email');
+		var emailValue = emailField.value.trim();
+		if (!validateEmail(emailValue)) {
+			emailField.classList.add('danger');
+			this.classList.add('danger')
+			allFieldsFilled = false;
+		} else {
+			emailField.classList.remove('danger');
+			this.classList.add('danger')
+		}
+
+		if (allFieldsFilled) {
+			var currentTime = new Date().getTime();
+			if (currentTime - clickTime < 1000) {
+				document.querySelector('.parent-modal').classList.remove('show');
+				document.querySelector('.parent-moda-two').classList.add('show');
+				document.querySelectorAll('input, textarea').forEach(function (element) {
+					element.value = '';
+				});
+			}
+		}
+	});
 
 })
