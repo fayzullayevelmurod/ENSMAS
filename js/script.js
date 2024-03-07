@@ -84,10 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		swiperInfo.forEach(title => {
 			const textContent = title.textContent.trim();
 			if (textContent.length > 207) {
-				console.log(textContent.substring(0, 207) + '...');
 				title.textContent = textContent.substring(0, 207) + '...';
-			} else {
-				console.log(textContent);
 			}
 		});
 	}
@@ -107,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	document.querySelector('.modal').addEventListener('click', function (e) {
-		console.log(e.target);
 		if (e.target === this) {
 			document.querySelector('.parent-modal').classList.remove('show');
 			document.querySelector('.parent-moda-two').classList.remove('show');
