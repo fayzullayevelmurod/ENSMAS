@@ -128,9 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			if (value === "") {
 				field.classList.add('danger');
+				document.querySelector('.send-data').classList.add('danger')
 				allFieldsFilled = false;
 			} else {
 				field.classList.remove('danger');
+				document.querySelector('.send-data').classList.remove('danger')
 			}
 		}
 
@@ -151,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (currentTime - clickTime < 1000) {
 				document.querySelector('.parent-modal').classList.remove('show');
 				document.querySelector('.parent-moda-two').classList.add('show');
+				document.querySelector('.send-data').classList.remove('danger')
 				document.querySelectorAll('input, textarea').forEach(function (element) {
 					element.value = '';
 				});
