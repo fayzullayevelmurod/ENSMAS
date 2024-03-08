@@ -279,7 +279,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -0.9375rem;
-  padding: 11.8125rem 0 11.813rem 0;
+  padding: 11.8125rem 0 17.813rem 0;
   position: relative;
   z-index: 1;
 }
@@ -357,7 +357,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5rem 18.5rem;
+  padding: 0 18.5rem 5rem 18.5rem;
   position: relative;
   z-index: 10;
 }
