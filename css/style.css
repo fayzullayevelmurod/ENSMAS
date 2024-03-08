@@ -279,7 +279,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -0.9375rem;
-  padding: 11.8125rem 0 17.375rem 0;
+  padding: 11.8125rem 0 11.813rem 0;
   position: relative;
   z-index: 1;
 }
@@ -633,7 +633,7 @@ body {
 }
 .sea-box .sea-img {
   position: relative;
-  margin: 6.25rem 4.875rem;
+  margin: 3.125rem 4.875rem 6.25rem 4.875rem;
   z-index: 1;
 }
 .sea-box .sea-img:hover::before {
@@ -1056,7 +1056,6 @@ body {
   width: 100%;
   margin: auto;
   margin: 3.125rem 0;
-  overflow-y: auto;
 }
 
 .modal-header h3 {
@@ -1723,7 +1722,7 @@ body {
   }
 
   .modal-dialog {
-    height: 100%;
+    height: fit-content;
     margin: 1rem 0;
     overflow-y: scroll;
   }
@@ -1810,14 +1809,11 @@ body {
     gap: 0;
   }
   .products-section .tab-content__img {
-    width: 20rem;
+    width: 100%;
     height: 25rem;
   }
   .products-section .tab-content__img-box {
     gap: 0.625rem;
-  }
-  .products-section .media-hide {
-    display: none;
   }
   .services-section .title-text__sm {
     font-size: 1.5rem;
@@ -2069,9 +2065,22 @@ body {
   .modal label {
     margin: 0.5rem 0 0.625rem 0;
   }
+  .products-section .tab-item {
+    min-width: 11.563rem;
+  }
 }
 @media screen and (max-width: 22.5625rem) {
   .media-sea__img img:first-child {
     width: 21.375rem;
   }
 }
+/* ::-webkit-scrollbar {
+  width: 15px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: red;
+}
+::-webkit-scrollbar-track {
+  background: teal;
+} */
